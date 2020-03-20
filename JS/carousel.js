@@ -20,27 +20,24 @@ const array = [
 ];
 
 
-let background = document.getElementById('slider');
-let title = document.getElementById('slider-title');
-let subtitle = document.getElementById('slider-subtitle');
-let info = document.getElementById('slider-info');
-let bubbles = document.querySelector('.section-slider-bubbles');
-let buttonLeftQuery = document.querySelector('.section-slider-wrapper-leftButton');
-let buttonRightQuery = document.querySelector('.section-slider-wrapper-rightButton');
+const background = document.getElementById('slider');
+const title = document.getElementById('slider-title');
+const subtitle = document.getElementById('slider-subtitle');
+const info = document.getElementById('slider-info');
+const bubbles = document.querySelector('.section-slider-bubbles');
+const buttonLeftQuery = document.querySelector('.section-slider-wrapper-leftButton');
+const buttonRightQuery = document.querySelector('.section-slider-wrapper-rightButton');
 let currentI = 0;
 let lastI = 0;
 let timer;
 
 function loadBubbles() {
-    let j = 0;
-    while (j < array.length)
-    {
+    array.forEach((item, i) => {
         let button = document.createElement('button');
         button.className = 'section-slider-bubbles-button-full';
-        button.id = `bubble-button-${j}`;
+        button.id = `bubble-button-${i}`;
         bubbles.append(button);
-        j++;
-    }
+    })
     document.getElementById('bubble-button-0').className = 'section-slider-bubbles-button-empty';
 }
 
