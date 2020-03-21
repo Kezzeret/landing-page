@@ -1,18 +1,18 @@
 const array = [
     {
-        url: '../img/slider-background.png',
+        url: './img/slider-background.png',
         title: 'Unique and Modern Design',
         subtitle: 'Portfolio PSD Template',
         info: 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.'
     },
     {
-        url: '../img/slider-background-1.jpg',
+        url: './img/slider-background-1.jpg',
         title: '2 Unique and Modern Design',
         subtitle: '2 Portfolio PSD Template',
         info: '2 Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.'
     },
     {
-        url: '../img/slider-background-2.jpg',
+        url: './img/slider-background-2.jpg',
         title: '3 Unique and Modern Design',
         subtitle: '3 Portfolio PSD Template',
         info: '3 Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.'
