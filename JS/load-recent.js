@@ -44,15 +44,17 @@ const previousRecent = document.querySelector('.section-recent-inner-buttons-lef
 const recentBubbles = document.querySelectorAll('.section-recent-inner-slider-item-image-bubbles');
 
 function loadRecent() {
-    recentBubbles.forEach((item, i) => {
+    let i = 0;
+    while (i < recentBubbles.length) {
         if (recentBubbles[i].children.length > 0)
         {
             let n = 0;
             while (recentBubbles[i].children.length > 0) {
-                recentBubbles[i].children[n].remove();
+                recentBubbles[i].remove(recentBubbles[i].children[n]);
             }
         }
-    });
+        i++
+    }
     items.forEach((item, i) => {
         items[i].children[0].style.background = `url("${recentArray[i].image[recentArray[i].active]}") no-repeat 50% 50%`;
         items[i].children[0].children[0].children[0].innerText = recentArray[i].dd;

@@ -92,7 +92,12 @@ bubbles.addEventListener('click', e => {
     if (!targetBubble)
         return;
     lastI = currentI;
-    currentI = dots.findIndex(dot => dot === targetBubble);
+    dots.some(function (e, i) {
+        if (e == targetBubble) {
+            currentI = i;
+            return (true);
+        }
+    });
     if (lastI == currentI)
         return;
     changeSlider();

@@ -80,8 +80,11 @@ bubbles.addEventListener('click', function (e) {
   var targetBubble = e.target.closest('button');
   if (!targetBubble) return;
   lastI = currentI;
-  currentI = dots.findIndex(function (dot) {
-    return dot === targetBubble;
+  dots.some(function (e, i) {
+    if (e == targetBubble) {
+      currentI = i;
+      return true;
+    }
   });
   if (lastI == currentI) return;
   changeSlider();
