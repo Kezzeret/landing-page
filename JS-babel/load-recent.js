@@ -42,7 +42,7 @@ function loadRecent() {
       var n = 0;
 
       while (recentBubbles[i].children.length > 0) {
-        recentBubbles[i].remove(recentBubbles[i].children[n]);
+        recentBubbles[i].removeChild(recentBubbles[i].children[n]);
       }
     }
 
