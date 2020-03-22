@@ -36,7 +36,7 @@ function loadBubbles() {
         let button = document.createElement('button');
         button.className = 'section-slider-bubbles-button-full';
         button.id = `bubble-button-${i}`;
-        bubbles.append(button);
+        bubbles.appendChild(button);
     })
     document.getElementById('bubble-button-0').className = 'section-slider-bubbles-button-empty';
 }

@@ -93,7 +93,7 @@
       align-items: center;
       &-title {
         margin: 0;
-        padding: 0;
+        padding: 20px 0 0 0;
         font-family: Raleway;
         font-size: 36px;
       }
@@ -139,6 +139,7 @@
   }
   &-bubbles {
     padding-bottom: 40px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,6 +251,7 @@
   .section-slider-mobileMenu {
     position: absolute;
     left: 0;
+    top: 0;
     width: 150px;
     height: 320px;
     background-color: #404040;
@@ -327,6 +329,7 @@
         }
       }
       &-title {
+        text-align: center;
         font-family: Raleway;
         font-weight: 600;
         font-size: 22px;
@@ -334,6 +337,7 @@
         padding-bottom: 19px;
       }
       &-text {
+        max-width: 100%;
         color: #8c8c8c;
         font-family: Montserrat;
         font-size: 14px;

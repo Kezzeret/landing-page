@@ -86,7 +86,7 @@ function loadRecentBubbles() {
                 let button = document.createElement('button');
                 button.className = 'section-recent-inner-slider-item-image-bubbles-button-full';
                 button.id = `recent-bubble-button-${n}-${i}`;
-                recentBubbles[n].append(button);
+                recentBubbles[n].appendChild(button);
             })
             document.getElementById(`recent-bubble-button-${n}-${recentArray[n].active}`).className = 'section-slider-bubbles-button-empty';
         }
@@ -99,13 +99,19 @@ items[1].addEventListener('click', changeImage(items[1], 1));
 items[2].addEventListener('click', changeImage(items[2], 2));
 
 function changeImage(currentItem, currentIndex) {
+    let number;
     return (e) => {
-        let number;
         let dots = Array.from(currentItem.children[0].children[1].children);
         const targetBubble = e.target.closest('button');
         if (!targetBubble)
             return;
-        number = dots.findIndex(dot => dot === targetBubble);
+        dots.some(function(e, i) {
+            if (e == targetBubble) {
+                number = i;
+                return true;
+            }
+        });
+        //number = dots.findIndex(dot => dot === targetBubble);
         recentArray[currentIndex].active = number;
         dots.forEach((item, i) => {
             dots[i].className = 'section-slider-bubbles-button-full';

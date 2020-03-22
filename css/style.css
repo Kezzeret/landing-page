@@ -505,7 +505,7 @@ template {
       align-items: center; }
       .section-slider-wrapper-content-title {
         margin: 0;
-        padding: 0;
+        padding: 20px 0 0 0;
         font-family: Raleway;
         font-size: 36px; }
       .section-slider-wrapper-content-subtitle {
@@ -543,6 +543,7 @@ template {
         background-image: url("../img/right_hover.png"); }
   .section-slider-bubbles {
     padding-bottom: 40px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -627,6 +628,7 @@ template {
   .section-slider-mobileMenu {
     position: absolute;
     left: 0;
+    top: 0;
     width: 150px;
     height: 320px;
     background-color: #404040;
@@ -680,12 +682,14 @@ template {
       .section-promo-inner-item-img .hover {
         display: none; }
     .section-promo-inner-item-title {
+      text-align: center;
       font-family: Raleway;
       font-weight: 600;
       font-size: 22px;
       color: #555555;
       padding-bottom: 19px; }
     .section-promo-inner-item-text {
+      max-width: 100%;
       color: #8c8c8c;
       font-family: Montserrat;
       font-size: 14px;
