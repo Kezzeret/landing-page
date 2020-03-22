@@ -496,7 +496,8 @@ template {
     .section-slider-wrapper-leftButton {
       width: 40px;
       height: 73px;
-      background-image: url("../img/left.png"); }
+      background-image: url("../img/left.png");
+      cursor: pointer; }
       .section-slider-wrapper-leftButton:hover {
         background-image: url("../img/left_hover.png"); }
     .section-slider-wrapper-content {
@@ -534,11 +535,13 @@ template {
         height: 53px;
         border: 0;
         box-shadow: inset 0 -3px 0 #736357;
-        background-color: #998675; }
+        background-color: #998675;
+        cursor: pointer; }
     .section-slider-wrapper-rightButton {
       width: 40px;
       height: 73px;
-      background-image: url("../img/right.png"); }
+      background-image: url("../img/right.png");
+      cursor: pointer; }
       .section-slider-wrapper-rightButton:hover {
         background-image: url("../img/right_hover.png"); }
   .section-slider-bubbles {
@@ -556,7 +559,8 @@ template {
       border-radius: 50%;
       background-color: #ffffff;
       opacity: 0.5;
-      margin: 0 5px; }
+      margin: 0 5px;
+      cursor: pointer; }
     .section-slider-bubbles-button-empty {
       padding-right: 4px;
       width: 15px;
@@ -565,7 +569,8 @@ template {
       border-radius: 50%;
       border: 2px solid #d3c1ad;
       background-color: transparent;
-      margin: 0 5px; }
+      margin: 0 5px;
+      cursor: pointer; }
   .section-slider-mobileMenu {
     display: flex;
     flex-direction: column;
@@ -657,9 +662,12 @@ template {
     font-size: 15px;
     width: 300px; }
   .section-slider-header {
-    justify-content: space-around; }
+    justify-content: space-around;
+    padding-top: 20px; }
   .section-slider-header-logo img {
-    height: 40px; } }
+    height: 40px; }
+  .section-slider-mobileMenu {
+    padding-top: 70px; } }
 
 .section-promo-inner {
   padding-top: 80px;
@@ -957,9 +965,9 @@ template {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        padding-top: 27px;
+        margin-top: 27px;
         padding-left: 30px;
-        padding-bottom: 27px; }
+        margin-bottom: 27px; }
         .section-recent-inner-slider-item-link span {
           margin-left: 9px;
           display: inline-block;
@@ -1020,3 +1028,102 @@ template {
     padding-top: 10px; }
   .section-recent-inner-slider-item.second {
     display: none; } }
+
+.section-logos {
+  margin-top: 80px;
+  position: relative;
+  background: url("../img/logos/background.png") no-repeat 50% 50%;
+  background-size: cover; }
+  .section-logos-inner {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .section-logos-inner-image {
+      min-width: 200px;
+      padding-right: 45px;
+      padding-left: 45px;
+      z-index: 10; }
+      .section-logos-inner-image img {
+        max-height: 50%;
+        max-width: 100%; }
+  .section-logos::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.7); }
+
+@media (max-width: 855px) {
+  .section-logos-inner {
+    flex-wrap: nowrap;
+    height: 35vh;
+    overflow: hidden; }
+    .section-logos-inner-image {
+      min-width: 0px;
+      padding-left: 30px;
+      padding-right: 30px; } }
+
+@media (max-width: 560px) {
+  .section-logos {
+    margin-top: 30px; }
+  .section-logos-inner {
+    flex-wrap: wrap;
+    height: 35vh; }
+    .section-logos-inner-image {
+      min-width: 70px;
+      max-width: 70px;
+      padding: 20px; } }
+
+.section-footer-inner {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #111111;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .section-footer-inner-links {
+    margin-right: 35px; }
+  .section-footer-inner-authors {
+    margin-left: 35px; }
+  .section-footer-inner ul {
+    list-style: none; }
+    .section-footer-inner ul li {
+      display: inline;
+      font-family: Montserrat;
+      font-size: 13px;
+      color: #555555;
+      font-weight: 400;
+      white-space: nowrap; }
+      .section-footer-inner ul li::after {
+        content: "|";
+        color: #555555; }
+      .section-footer-inner ul li:last-child::after {
+        display: none; }
+      .section-footer-inner ul li a {
+        text-decoration: none;
+        color: #555555; }
+        .section-footer-inner ul li a:hover {
+          color: #c7b299; }
+          .section-footer-inner ul li a:hover .footer-title {
+            color: #c7a173; }
+  .section-footer-inner .footer-title {
+    color: #959595; }
+
+@media (max-width: 600px) {
+  .section-footer-inner {
+    display: block;
+    padding: 15px; }
+    .section-footer-inner ul {
+      padding-left: 0;
+      text-align: center; }
+    .section-footer-inner-links {
+      margin: 0; }
+    .section-footer-inner-authors {
+      margin-top: 20px;
+      margin-left: 0; } }
