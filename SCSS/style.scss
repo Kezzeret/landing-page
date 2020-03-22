@@ -1,10 +1,31 @@
 @import 'normalize.scss';
 @import 'fonts.scss';
 
+// === Mixins ===
+
+@mixin font-main {
+  font-family: Montserrat;
+}
+
+@mixin font-title{
+  font-family: Raleway;
+}
+
+// === / Mixins ===
+
+// === Variables ===
+
+$color-white: #ffffff;
+$color-text: #8c8c8c;
+$color-title: #555555;
+$color-hover: #c7b299;
+
+// === / Variables ===
+
 // === slider ===
 
 .section-slider {
-  color: #ffffff;
+  color: $color-white;
   //background-image: url("../img/slider-background.png");
   transition: background 0.5s linear;
   background: url("../img/slider-background.png") no-repeat 50% 50%;
@@ -36,9 +57,9 @@
     align-items: center;
     padding-top: 40px;
     &-logo {
+      @include font-title;
       display: flex;
       align-items: center;
-      font-family: Raleway;
       font-weight: 400;
       font-size: 34px;
       padding-left: 50px;
@@ -48,16 +69,16 @@
       flex-shrink: 1;
       padding-right: 63px;
       a {
+        @include font-main;
         text-decoration: none;
         color: white;
-        font-family: Montserrat;
         line-height: 26px;
         font-size: 14px;
         font-weight: 300;
         padding: 15px;
       }
       a:hover {
-        color: #c7b299;
+        color: $color-hover;
       }
     }
     &-icon-bag {
@@ -93,30 +114,30 @@
 
       align-items: center;
       &-title {
+        @include font-title;
         margin: 0;
         padding: 20px 0 0 0;
-        font-family: Raleway;
         font-size: 36px;
       }
       &-subtitle {
+        @include font-title;
         margin-top: 14px;
-        font-family: Raleway;
         font-weight: 800;
         font-size: 52px;
         text-align: center;
       }
       &-info {
+        @include font-main;
         width: 560px;
         text-align: center;
         margin-top: 19px;
-        font-family: Montserrat;
         font-weight: 300;
         font-size: 16px;
         line-height: 24px;
       }
       &-button {
-        font-family: Raleway;
-        color: #ffffff;
+        @include font-title;
+        color: $color-white;
         margin-top: 30px;
         font-weight: 800;
         font-size: 14px;
@@ -153,7 +174,7 @@
       outline: none;
       border: 0;
       border-radius: 50%;
-      background-color: #ffffff;
+      background-color: $color-white;
       opacity: 0.5;
       margin: 0 5px;
       cursor: pointer;
@@ -264,15 +285,15 @@
     padding-top: 100px;
     padding-left: 30px;
     a {
+      @include font-main;
       text-decoration: none;
       color: white;
-      font-family: Montserrat;
       font-size: 16px;
       font-weight: 600;
       padding: 10px;
     }
     a:hover {
-      color: #c7b299;
+      color: $color-hover;
     }
     &.active {
       display: flex;
@@ -338,17 +359,17 @@
         }
       }
       &-title {
+        @include font-title;
         text-align: center;
-        font-family: Raleway;
         font-weight: 600;
         font-size: 22px;
-        color: #555555;
+        color: $color-title;
         padding-bottom: 19px;
       }
       &-text {
+        @include font-main;
         max-width: 100%;
-        color: #8c8c8c;
-        font-family: Montserrat;
+        color: $color-text;
         font-size: 14px;
         font-weight: 500;
         line-height: 24px;
@@ -362,10 +383,10 @@
       }
       &:hover {
         .section-promo-inner-item-title {
-          color: #c7b299;
+          color: $color-hover;
         }
         .section-promo-inner-item-border {
-          background-color: #c7b299;
+          background-color: $color-hover;
         }
         .hover {
           display: block;
@@ -399,25 +420,25 @@
       align-self: center;
       padding-right: 40px;
       &-title {
-        color: #555555;
-        font-family: Raleway;
+        @include font-title;
+        color: $color-title;
         font-size: 30px;
         font-weight: 600;
       }
       &-text {
+        @include font-main;
         padding-top: 40px;
-        color: #8c8c8c;
+        color: $color-text;
         max-width: 680px;
-        font-family: Montserrat;
         font-size: 16px;
         font-weight: 300;
         line-height: 28px;
       }
       &-ul {
+        @include font-main;
         padding-top: 45px;
         padding-left: 50px;
-        color: #8c8c8c;
-        font-family: Montserrat;
+        color: $color-text;
         font-size: 16px;
         font-weight: 300;
         line-height: 32px;
@@ -474,16 +495,16 @@
       &-image {
       }
       &-count {
-        color: #ffffff;
-        font-family: Montserrat;
+        @include font-main;
+        color: $color-white;
         font-size: 48px;
         font-weight: 200;
         line-height: 36px;
         padding-top: 30px;
       }
       &-title {
-        color: #c7b299;
-        font-family: Montserrat;
+        @include font-main;
+        color: $color-hover;
         font-size: 14px;
         font-weight: 300;
         line-height: 20px;
@@ -494,7 +515,7 @@
       &-border {
         width: 30px;
         height: 2px;
-        background-color: #ffffff;
+        background-color: $color-white;
       }
     }
   }
@@ -523,16 +544,16 @@
           }
         }
         &-count {
-          color: #ffffff;
-          font-family: Montserrat;
+          @include font-main;
+          color: $color-white;
           font-size: 36px;
           font-weight: 200;
           line-height: 27px;
           padding-top: 22px;
         }
         &-title {
-          color: #c7b299;
-          font-family: Montserrat;
+          @include font-main;
+          color: $color-hover;
           font-size: 11px;
           font-weight: 300;
           line-height: 15px;
@@ -543,7 +564,7 @@
         &-border {
           width: 22px;
           height: 2px;
-          background-color: #ffffff;
+          background-color: $color-white;
         }
       }
     }
@@ -561,17 +582,17 @@
     justify-content: center;
     align-items: center;
     &-title {
-      color: #555555;
-      font-family: Raleway;
+      @include font-title;
+      color: $color-title;
       font-size: 30px;
       font-weight: 400;
       padding-top: 80px;
     }
     &-text {
+      @include font-main;
       max-width: 780px;
       text-align: center;
-      color: #8c8c8c;
-      font-family: Montserrat;
+      color: $color-text;
       font-size: 16px;
       font-weight: 300;
       line-height: 28px;
@@ -607,6 +628,7 @@
             flex-direction: column;
             z-index: 10;
             &-dd {
+              @include font-main;
               width: 50px;
               height: 35px;
               border-radius: 3px 3px 0 0;
@@ -614,13 +636,13 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              color: #ffffff;
-              font-family: Montserrat;
+              color: $color-white;
               font-size: 24px;
               font-weight: 300;
               line-height: 20px;
             }
             &-mm {
+              @include font-main;
               width: 50px;
               height: 25px;
               border-radius: 0 0 3px 3px;
@@ -628,8 +650,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              color: #ffffff;
-              font-family: Montserrat;
+              color: $color-white;
               font-size: 12px;
               font-weight: 400;
               line-height: 20px;
@@ -648,7 +669,7 @@
               border-radius: 50%;
               width: 11px;
               height: 11px;
-              background-color: #ffffff;
+              background-color: $color-white;
               opacity: 0.5;
               margin: 0 5px;
             }
@@ -665,16 +686,16 @@
           }
         }
         &-title {
-          color: #555555;
-          font-family: Raleway;
+          @include font-title;
+          color: $color-title;
           font-size: 20px;
           font-weight: 500;
           padding-top: 30px;
           padding-left: 30px;
         }
         &-text {
-          color: #8c8c8c;
-          font-family: Montserrat;
+          @include font-main;
+          color: $color-text;
           font-size: 14px;
           font-weight: 400;
           line-height: 22px;
@@ -682,8 +703,8 @@
           padding-left: 30px;
         }
         &-link {
-          color: #c7b299;
-          font-family: Montserrat;
+          @include font-main;
+          color: $color-hover;
           font-size: 14px;
           font-weight: 400;
           line-height: 20px;
@@ -695,7 +716,7 @@
             display: inline-block;
             width: 0;
             height: 0;
-            border: 4px solid transparent; border-left: 5px solid #c7b299;
+            border: 4px solid transparent; border-left: 5px solid $color-hover;
           }
         }
         &:hover {
@@ -713,7 +734,7 @@
               }
             &-date {
               &-dd {
-                background-color: #c7b299;
+                background-color: $color-hover;
               }
               &-mm {
                 background-color: #a48d72;
@@ -721,10 +742,10 @@
             }
           }
           .section-recent-inner-slider-item-title {
-            color: #c7b299;
+            color: $color-hover;
           }
           .section-recent-inner-slider-item-text {
-            color: #ffffff;
+            color: $color-white;
           }
         }
       }
@@ -873,24 +894,24 @@
   ul {
     list-style: none;
     li {
+      @include font-main;
       display: inline;
-      font-family: Montserrat;
       font-size: 13px;
-      color: #555555;
+      color: $color-title;
       font-weight: 400;
       white-space: nowrap;
       &::after {
         content: "|";
-        color: #555555;
+        color: $color-title;
       }
       &:last-child::after {
         display: none;
       }
       a {
         text-decoration: none;
-        color: #555555;
+        color: $color-title;
         &:hover {
-          color: #c7b299;
+          color: $color-hover;
           .footer-title {
             color: #c7a173;
           }
