@@ -28,7 +28,7 @@ $color-hover: #c7b299;
   color: $color-white;
   //background-image: url("../img/slider-background.png");
   transition: background 0.5s linear;
-  background: url("../img/slider-background.png") no-repeat 50% 50%;
+  background: url("../img/slider/slider-background.png") no-repeat 50% 50%;
   background-size: cover;
   position: relative;
 
@@ -102,10 +102,10 @@ $color-hover: #c7b299;
     &-leftButton {
       width: 40px;
       height: 73px;
-      background-image: url("../img/left.png");
+      background-image: url("../img/slider/left.png");
       cursor: pointer;
       &:hover {
-        background-image: url("../img/left_hover.png");
+        background-image: url("../img/slider/left_hover.png");
       }
     }
     &-content {
@@ -154,10 +154,10 @@ $color-hover: #c7b299;
     &-rightButton {
       width: 40px;
       height: 73px;
-      background-image: url("../img/right.png");
+      background-image: url("../img/slider/right.png");
       cursor: pointer;
       &:hover {
-        background-image: url("../img/right_hover.png");
+        background-image: url("../img/slider/right_hover.png");
       }
     }
   }
@@ -267,6 +267,17 @@ $color-hover: #c7b299;
   }
   .section-slider-wrapper {
     justify-content: center;
+    &-content {
+      &-title {
+        max-width: 100%;
+      }
+      &-subtitle {
+        max-width: 100%;
+      }
+      &-info {
+        max-width: 100%;
+      }
+    }
     &-rightButton {
       display: none;
     }
@@ -454,6 +465,9 @@ $color-hover: #c7b299;
 }
 
 @media (max-width: 855px) {
+  .section-mobile-inner {
+    padding-top: 30px;
+  }
   .section-mobile-inner-image {
     display: none;
   }
@@ -468,6 +482,12 @@ $color-hover: #c7b299;
       li {
         padding-left: 10px;
       }
+    }
+    &-title {
+      max-width: 100%;
+    }
+    &-text {
+      max-width: 100%;
     }
   }
 }
@@ -688,6 +708,7 @@ $color-hover: #c7b299;
         &-title {
           @include font-title;
           color: $color-title;
+          max-width: 100%;
           font-size: 20px;
           font-weight: 500;
           padding-top: 30px;
@@ -695,6 +716,7 @@ $color-hover: #c7b299;
         }
         &-text {
           @include font-main;
+          max-width: 100%;
           color: $color-text;
           font-size: 14px;
           font-weight: 400;
@@ -708,9 +730,8 @@ $color-hover: #c7b299;
           font-size: 14px;
           font-weight: 400;
           line-height: 20px;
-          margin-top: 27px;
-          padding-left: 30px;
-          margin-bottom: 27px;
+          margin: 27px 240px 27px 30px;
+          cursor: pointer;
           span {
             margin-left: 9px;
             display: inline-block;
@@ -792,6 +813,9 @@ $color-hover: #c7b299;
 }
 
 @media (max-width: 800px) {
+  .section-recent-inner-slider-item-link {
+    margin: 27px 150px 27px 30px;
+  }
   .section-recent-inner-slider-item.first {
     max-width: 370px;
     min-width: 280px;

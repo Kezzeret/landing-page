@@ -1,6 +1,6 @@
 let recentArray = [
     {
-        image: ["./img/recent/photo-1.png", "./img/recent/photo-2.png", "./img/recent/photo-3.png"],
+        image: ["./img/recent/photo-1.png", "./img/recent/photo-5.png", "./img/recent/photo-6.png"],
         title: 'Lorem ipsum dolor sit amet',
         text: 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.',
         dd: '30',
@@ -24,7 +24,7 @@ let recentArray = [
         active: 0
     },
     {
-        image: ["./img/recent/photo-4.jpg", "./img/recent/photo-3.png"],
+        image: ["./img/recent/photo-4.png", "./img/recent/photo-7.png"],
         title: 'Lorem ipsum dolor sit amet',
         text: 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.',
         dd: '30',
