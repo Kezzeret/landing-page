@@ -501,7 +501,6 @@ template {
       .section-slider-wrapper-leftButton:hover {
         background-image: url("../img/slider/left_hover.png"); }
     .section-slider-wrapper-content {
-      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center; }
@@ -630,12 +629,14 @@ template {
       order: -1; }
   .section-slider-wrapper {
     justify-content: center; }
-    .section-slider-wrapper-content-title {
-      max-width: 100%; }
-    .section-slider-wrapper-content-subtitle {
-      max-width: 100%; }
-    .section-slider-wrapper-content-info {
-      max-width: 100%; }
+    .section-slider-wrapper-content {
+      width: 100%; }
+      .section-slider-wrapper-content-title {
+        max-width: 100%; }
+      .section-slider-wrapper-content-subtitle {
+        max-width: 100%; }
+      .section-slider-wrapper-content-info {
+        max-width: 100%; }
     .section-slider-wrapper-rightButton {
       display: none; }
     .section-slider-wrapper-leftButton {
