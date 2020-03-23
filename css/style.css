@@ -770,16 +770,13 @@ template {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
-    padding-right: 20px; }
+    padding-right: 20px;
+    width: 100%; }
     .section-mobile-inner-content-ul {
       padding-top: 10px;
       padding-left: 0; }
       .section-mobile-inner-content-ul li {
-        padding-left: 10px; }
-    .section-mobile-inner-content-title {
-      max-width: 100%; }
-    .section-mobile-inner-content-text {
-      max-width: 100%; } }
+        padding-left: 10px; } }
 
 .section-stat-inner {
   display: flex;
@@ -1042,7 +1039,9 @@ template {
   .section-recent-inner-buttons {
     padding-top: 10px; }
   .section-recent-inner-slider-item.second {
-    display: none; } }
+    display: none; }
+  .selection-recent-inner-text {
+    width: 100%; } }
 
 .section-logos {
   margin-top: 80px;

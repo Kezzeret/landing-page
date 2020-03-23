@@ -476,18 +476,13 @@ $color-hover: #c7b299;
     flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
+    width: 100%;
     &-ul {
       padding-top: 10px;
       padding-left: 0;
       li {
         padding-left: 10px;
       }
-    }
-    &-title {
-      max-width: 100%;
-    }
-    &-text {
-      max-width: 100%;
     }
   }
 }
@@ -828,6 +823,9 @@ $color-hover: #c7b299;
   }
   .section-recent-inner-slider-item.second {
     display: none;
+  }
+  .selection-recent-inner-text {
+    width: 100%;
   }
 }
 
