@@ -873,8 +873,8 @@ template {
     font-weight: 300;
     line-height: 28px;
     padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px; }
+    margin-left: 30px;
+    margin-right: 30px; }
   .section-recent-inner-slider {
     display: flex;
     flex-direction: row;
@@ -1040,7 +1040,7 @@ template {
     padding-top: 10px; }
   .section-recent-inner-slider-item.second {
     display: none; }
-  .selection-recent-inner-text {
+  .section-recent-inner-text {
     width: 100%; } }
 
 .section-logos {

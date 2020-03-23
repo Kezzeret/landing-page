@@ -612,8 +612,8 @@ $color-hover: #c7b299;
       font-weight: 300;
       line-height: 28px;
       padding-top: 30px;
-      padding-left: 30px;
-      padding-right: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
     }
     &-slider {
       display: flex;
@@ -824,7 +824,7 @@ $color-hover: #c7b299;
   .section-recent-inner-slider-item.second {
     display: none;
   }
-  .selection-recent-inner-text {
+  .section-recent-inner-text {
     width: 100%;
   }
 }
